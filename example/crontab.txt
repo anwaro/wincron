@@ -1,0 +1,3 @@
+# cron tab jobs
+*/5 * * * * php C:\xampp\htdocs\run.php
+

@@ -1,0 +1,22 @@
+{
+    "name": "anwaro/wincron",
+    "description": "Run cron job on Windows platform",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Łukasz Micał",
+            "email": "lukasz.mical11@gamil.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5"
+    }
+}

@@ -30,4 +30,30 @@ class JobTest extends TestCase
         $this->assertFalse($job->jobShouldRun('2018-09-01 00:12:00', '0 0,12 1 */2 *'));
     }
 
+
+    public function testExecuteCommandFunction()
+    {
+        $file = 'run.log';
+        $content = 'example content';
+        $createFileCmd = "touch $file";
+        $addContentToFile = "echo $content > $file";
+        $removeFile = "rm $file";
+
+        $job = new Job();
+
+        $job->execute($createFileCmd);
+
+        $this->assertTrue(file_exists($file));
+
+        $job->execute($addContentToFile);
+
+        $this->assertEquals(
+            trim($content),
+            trim(file_get_contents($file))
+        );
+
+        $job->execute($removeFile);
+
+        $this->assertFalse(file_exists($file));
+    }
 }

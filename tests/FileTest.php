@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use anwaro\cron\File;
+use anwaro\wincron\File;
 
 class FileTest extends TestCase
 {

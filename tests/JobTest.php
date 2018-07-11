@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use anwaro\cron\Job;
+use anwaro\wincron\Job;
 
 class JobTest extends TestCase
 {

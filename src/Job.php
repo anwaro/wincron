@@ -6,7 +6,7 @@
  * Time: 12:35
  */
 
-namespace anwaro\cron;
+namespace anwaro\wincron;
 
 class Job
 {

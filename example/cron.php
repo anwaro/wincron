@@ -8,7 +8,7 @@
 
 require_once '../vendor/autoload.php';
 
-use anwaro\cron\Cron;
+use anwaro\wincron\Cron;
 
 $config = [
     'path' => __DIR__

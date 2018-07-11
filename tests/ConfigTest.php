@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use anwaro\cron\Config;
+use anwaro\wincron\Config;
 
 class ConfigTest extends TestCase
 {

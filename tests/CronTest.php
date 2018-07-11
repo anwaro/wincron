@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use anwaro\cron\Cron;
+use anwaro\wincron\Cron;
 
 class CronTest extends TestCase
 {

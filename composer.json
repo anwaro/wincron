@@ -1,15 +1,27 @@
 {
     "name": "anwaro/wincron",
     "description": "Run cron job on Windows platform",
-    "type": "lib",
-    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "anwaro",
+        "cron",
+        "wincron",
+        "windows"
+    ],
+    "homepage": "http://lukaszmical.pl/",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Łukasz Micał",
-            "email": "lukasz.mical11@gamil.com"
+            "email": "lukasz.mical11@gamil.com",
+            "homepage": "http://lukaszmical.pl/",
+            "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/anwaro/cron/issues",
+        "source": "https://github.com/anwaro/cron"
+    },
     "autoload": {
         "classmap": [
             "src/"

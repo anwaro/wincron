@@ -1,7 +1,7 @@
 {
     "name": "anwaro/wincron",
     "description": "Run cron job on Windows platform",
-    "type": "project",
+    "type": "lib",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +9,7 @@
             "email": "lukasz.mical11@gamil.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "classmap": [
             "src/"

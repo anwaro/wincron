@@ -54,6 +54,10 @@ class Job
      */
     public function execute($cmd)
     {
-
+        if (substr(php_uname(), 0, 7) == "Windows") {
+            popen($cmd, "r");
+        } else {
+            exec($cmd);
+        }
     }
 }

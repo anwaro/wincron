@@ -23,6 +23,7 @@ class Cron
     /** @var int $startJobRunTime */
     private $startJobRunTime;
 
+    /** @var Config $config */
     private $config;
 
     public function __construct($config)
@@ -62,7 +63,8 @@ class Cron
      */
     public function sleep()
     {
-        usleep(Cron::SLEEP_TIME - ($this->getMicroTime() - $this->startJobRunTime));
+        $delay = Cron::SLEEP_TIME - ($this->getMicroTime() - $this->startJobRunTime);
+        usleep($delay > 0 ? $delay : 0);
     }
 
     /**

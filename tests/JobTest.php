@@ -64,4 +64,38 @@ class JobTest extends TestCase
 
         $this->assertFalse(file_exists($file));
     }
+
+
+    /**
+     * @group std
+     */
+    public function testRunCommandFunction()
+    {
+        $file = 'run.log';
+        $date = '2018-08-01 00:05:00';
+        $period = '5 0 * 8 *';
+
+        $createFileCmd = "touch $file";
+        $removeFile = "rm $file";
+
+        $job = new Job();
+
+        $job->run([
+            [
+                'period' => $period,
+                'cmd' => $createFileCmd
+            ]
+        ], $date);
+
+        $this->assertTrue(file_exists($file));
+
+        $job->run([
+            [
+                'period' => $period,
+                'cmd' => $removeFile
+            ]
+        ], $date);
+
+        $this->assertFalse(file_exists($file));
+    }
 }

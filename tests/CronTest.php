@@ -43,4 +43,16 @@ class CronTest extends TestCase
     /**
      * @group sleep
      */
+    public function testSleep()
+    {
+        $job = new Cron([]);
+        $date = new DateTime();
+        $job->startJob();
+        $job->sleep();
+        $this->assertEquals(
+            (new \DateTime())->format('Y-m-d H:i:s'),
+            $date->modify('+1 minute')->format('Y-m-d H:i:s')
+        );
+    }
+
 }

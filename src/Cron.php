@@ -20,8 +20,8 @@ class Cron
     /** @var Job $job */
     private $job;
 
-    /** @var int $startJobRunTime */
-    private $startJobRunTime;
+    /** @var int jobStartTime*/
+    private $jobStartTime;
 
     /** @var Config $config */
     private $config;
@@ -63,16 +63,16 @@ class Cron
      */
     public function sleep()
     {
-        $delay = Cron::SLEEP_TIME - ($this->getMicroTime() - $this->startJobRunTime);
+        $delay = Cron::SLEEP_TIME - ($this->getMicroTime() - $this->jobStartTime);
         usleep($delay > 0 ? $delay : 0);
     }
 
     /**
      *
      */
-    private function startJob()
+    public function startJob()
     {
-        $this->startJobRunTime = $this->getMicroTime();
+        $this->jobStartTime= $this->getMicroTime();
     }
 
     /**

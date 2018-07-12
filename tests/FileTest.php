@@ -11,6 +11,10 @@ use anwaro\wincron\File;
 
 class FileTest extends TestCase
 {
+
+    /**
+     * @group std
+     */
     public function testStringIsCronComment()
     {
         $file = new File(__DIR__, '');
@@ -30,6 +34,10 @@ class FileTest extends TestCase
         );
     }
 
+
+    /**
+     * @group std
+     */
     public function testExtractPeriodFromCronEntry()
     {
         $file = new File(__DIR__, '');
@@ -49,6 +57,10 @@ class FileTest extends TestCase
         );
     }
 
+
+    /**
+     * @group std
+     */
     public function testExtractCommandFromCronEntry()
     {
         $file = new File(__DIR__, '');
@@ -67,6 +79,10 @@ class FileTest extends TestCase
         );
     }
 
+
+    /**
+     * @group std
+     */
     public function testExtractCronJobDataFromCronEntry()
     {
         $file = new File(__DIR__, '');
@@ -84,6 +100,10 @@ class FileTest extends TestCase
         );
     }
 
+
+    /**
+     * @group std
+     */
     public function testParseCronJobsFromString()
     {
         $file = new File(__DIR__, '');
@@ -126,7 +146,9 @@ class FileTest extends TestCase
 
     }
 
-
+    /**
+     * @group std
+     */
     public function testReadFromCronTabFile()
     {
         $file = 'crontab.txt';
@@ -143,7 +165,9 @@ class FileTest extends TestCase
         );
     }
 
-
+    /**
+     * @group std
+     */
     public function testReadCronFromFile()
     {
         $file = 'crontab.txt';

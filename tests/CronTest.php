@@ -12,6 +12,9 @@ use anwaro\wincron\Cron;
 class CronTest extends TestCase
 {
 
+    /**
+     * @group std
+     */
     public function testGettingCurrentTime()
     {
         $job = new Cron([]);
@@ -22,7 +25,9 @@ class CronTest extends TestCase
         );
     }
 
-
+    /**
+     * @group sleep
+     */
     public function testCalibrateLoopStartTime()
     {
         $job = new Cron([]);
@@ -34,4 +39,8 @@ class CronTest extends TestCase
         );
     }
 
+
+    /**
+     * @group sleep
+     */
 }

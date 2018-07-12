@@ -11,6 +11,10 @@ use anwaro\wincron\Config;
 
 class ConfigTest extends TestCase
 {
+
+    /**
+     * @group std
+     */
     public function testDefaultConfig()
     {
         $config = new Config([]);
@@ -27,6 +31,9 @@ class ConfigTest extends TestCase
 
     }
 
+    /**
+     * @group std
+     */
     public function testConfigSettingByConstructor()
     {
         $config = new Config([
@@ -55,6 +62,9 @@ class ConfigTest extends TestCase
         );
     }
 
+    /**
+     * @group std
+     */
     public function testConfigSetter()
     {
         $config = new Config([

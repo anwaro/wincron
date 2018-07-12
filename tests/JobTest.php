@@ -11,6 +11,10 @@ use anwaro\wincron\Job;
 
 class JobTest extends TestCase
 {
+
+    /**
+     * @group std
+     */
     public function testJobShouldRun()
     {
         $job = new Job();
@@ -31,6 +35,10 @@ class JobTest extends TestCase
     }
 
 
+
+    /**
+     * @group std
+     */
     public function testExecuteCommandFunction()
     {
         $file = 'run.log';

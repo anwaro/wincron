@@ -21,7 +21,7 @@ composer require --prefer-dist anwaro/wincron "*"
 or add
 
 ```
-"piotrmus/yii2-url-parser": "*"
+"anwaro/wincron": "*"
 ```
 
 to the require section of your `composer.json` file.

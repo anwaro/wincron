@@ -6,6 +6,7 @@
         "anwaro",
         "cron",
         "wincron",
+        "phpcron",
         "windows"
     ],
     "homepage": "http://lukaszmical.pl/",
@@ -19,8 +20,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/anwaro/cron/issues",
-        "source": "https://github.com/anwaro/cron"
+        "issues": "https://github.com/anwaro/wincron/issues",
+        "source": "https://github.com/anwaro/wincron"
     },
     "autoload": {
         "classmap": [
